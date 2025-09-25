@@ -12,6 +12,7 @@ print(f"Welcome {student_name} to the College Life Game")
 print("Here are your starting stats:")
 print(f"GPA: {current_gpa}, Study Hours: {study_hours}, Social Points: {social_points}, Stress Level: {stress_level}")
 
+
 # Step 2: Course Planning Decision
 print("Choose your course load:")
 print("A) Light (12 credits)")
