@@ -70,3 +70,38 @@ else:
             social_points += 5
             print(f"Studying {study_choice} gave you balance and better connections.")
 
+# Step 4: Final Semester Assessment
+print(" Final Semester Assessment ")
+
+# Identity operator
+if type(current_gpa) is float:
+    print("Confirmed: GPA is a float type.")
+elif type(current_gpa) is not float:
+    print("Invalid")
+
+# ifs for endings
+if current_gpa >= 3.5:
+    if stress_level < 50:
+        if social_points>=40:
+            ending = "Dean’s List with no help"
+        else:
+            ending = "Dean’s List with help"
+    else:
+        ending = "High GPA but too stressed: burnout ending."
+elif current_gpa < 2.0:
+    if social_points < 30:
+        if stress_level>60:
+            ending = "complete burnout: low gpa, low support, high stress."
+        else:
+            ending = "Academic Probation: low GPA and no support system."
+    else:
+        ending = "Probation"
+else:
+    if study_hours > 25 and stress_level < 60:
+        ending = "Balanced Success: steady GPA and manageable stress."
+    else:
+        ending = "Average Semester: you stayed afloat."
+
+print(f"Final Stats for {student_name}:")
+print(f"GPA: {round(current_gpa,2)}, Study Hours: {study_hours}, Social Points: {social_points}, Stress Level: {stress_level}")
+print(f"Ending: {ending}")
